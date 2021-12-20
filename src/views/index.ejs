@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <link rel="stylesheet" href="/bootstrap/css/bootstrap.min.css" />
+        <title>WEBRTC</title>
+    </head>
+    <body>
+        <section class="w-100 vh-100 d-flex flex-column">
+            <h1 class="text-center mt-3">Video Chat</h1>
+            <div class="container mt-3">
+                <div class="row">
+                    <div class="col-3">
+                        <h2 class="">Users</h2>
+                        <ul class="list-group w-100 users-list"></ul>
+                    </div>
+                    <div class="col-9">
+                        <h2>Chat</h2>
+                        <div class="row">
+                            <div class="col-6 myVideoChat">
+                                <div class="card">
+                                    <div class="card-header">
+                                        <h2 class="card-title">My id</h2>
+                                    </div>
+                                    <div class="card-body">
+                                        <video
+                                            class="w-100"
+                                            autoplay
+                                            controls
+                                        ></video>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-6 partnerVideoChat">
+                                <div class="card">
+                                    <div class="card-header">
+                                        <h2 class="card-title">Friend id</h2>
+                                    </div>
+                                    <div class="card-body">
+                                        <video
+                                            class="w-100"
+                                            autoplay
+                                            controls
+                                        ></video>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <script src="/socket/socket.io.js"></script>
+        <script src="/peerjs/peerjs.min.js"></script>
+        <script src="/public/main.js"></script>
+    </body>
+</html>
